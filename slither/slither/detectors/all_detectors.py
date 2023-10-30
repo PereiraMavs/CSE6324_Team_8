@@ -93,3 +93,4 @@ from .operations.cache_array_length import CacheArrayLength
 from .statements.incorrect_using_for import IncorrectUsingFor
 from .operations.encode_packed import EncodePackedCollision
 from .operations.fusible_loops import FusibleLoops
+from .operations.arraytomapping import ArrayToMapping
