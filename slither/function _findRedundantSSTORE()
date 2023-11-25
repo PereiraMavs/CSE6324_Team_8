@@ -1,0 +1,6 @@
+function _findRedundantSSTORE()
+    list1 = findAssigmentOperations()
+    for all operations in list1
+        if operation in storage operation 
+            result += findIfStorageNeverUsed
+    return result

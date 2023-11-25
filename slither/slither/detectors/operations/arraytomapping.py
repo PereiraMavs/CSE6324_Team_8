@@ -8,6 +8,9 @@ from slither.core.variables.state_variable import StateVariable
 from slither.core.declarations.contract import Contract
 from slither.core.solidity_types import ArrayType
 
+from slither.core.declarations.contract import Contract
+from slither.core.solidity_types import ArrayType
+
 from slither import Slither
 
 class ArrayToMapping(AbstractDetector):
@@ -15,9 +18,10 @@ class ArrayToMapping(AbstractDetector):
     HELP = (
         "Array to Mapping Detector"
     )
-    IMPACT = DetectorClassification.OPTIMIZATION
+    IMPACT = DetectorClassification.HIGH
     CONFIDENCE = DetectorClassification.MEDIUM
 
+    WIKI = "https://github.com/PereiraMavs/CSE6324_Team_8/wiki/Detector-Wiki#array-to-mapping"
     WIKI = "https://github.com/PereiraMavs/CSE6324_Team_8/wiki/Detector-Wiki#array-to-mapping"
 
     WIKI_TITLE = "Array to mapping"
@@ -38,7 +42,7 @@ class ArrayToMapping(AbstractDetector):
                #If an Array state variable is found, add it to the list of issues:
                issues.append(state_variable)
         
-       return issues
+          return issues
 
    
     def _detect(self) -> List[Output]:
@@ -58,3 +62,4 @@ class ArrayToMapping(AbstractDetector):
 
         return results
     
+
