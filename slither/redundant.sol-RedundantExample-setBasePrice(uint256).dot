@@ -1,0 +1,76 @@
+digraph{
+0[label="Node Type: ENTRY_POINT 0
+"];
+0->1;
+1[label="Node Type: EXPRESSION 1
+
+EXPRESSION:
+baseprice = new_baseprice
+
+IRs:
+baseprice(uint256) := new_baseprice(uint256)"];
+1->4;
+2[label="Node Type: BEGIN_LOOP 2
+"];
+2->5;
+3[label="Node Type: END_LOOP 3
+"];
+3->8;
+4[label="Node Type: NEW VARIABLE 4
+
+EXPRESSION:
+i = 0
+
+IRs:
+i(uint256) := 0(uint256)"];
+4->2;
+5[label="Node Type: IF_LOOP 5
+
+EXPRESSION:
+i < new_baseprice
+
+IRs:
+TMP_0(bool) = i < new_baseprice
+CONDITION TMP_0"];
+5->6[label="True"];
+5->3[label="False"];
+6[label="Node Type: EXPRESSION 6
+
+EXPRESSION:
+check = new_baseprice + i
+
+IRs:
+TMP_1(uint256) = new_baseprice (c)+ i
+check(uint256) := TMP_1(uint256)"];
+6->7;
+7[label="Node Type: EXPRESSION 7
+
+EXPRESSION:
+i ++
+
+IRs:
+TMP_2(uint256) := i(uint256)
+i(uint256) = i (c)+ 1"];
+7->5;
+8[label="Node Type: IF 8
+
+EXPRESSION:
+new_baseprice > 10
+
+IRs:
+TMP_3(bool) = new_baseprice > 10
+CONDITION TMP_3"];
+8->9[label="True"];
+8->10[label="False"];
+9[label="Node Type: EXPRESSION 9
+
+EXPRESSION:
+baseprice = baseprice + 1
+
+IRs:
+TMP_4(uint256) = baseprice (c)+ 1
+baseprice(uint256) := TMP_4(uint256)"];
+9->10;
+10[label="Node Type: END_IF 10
+"];
+}

@@ -41,8 +41,7 @@ class ArrayToMapping(AbstractDetector):
            if (isinstance(state_variable.type, ArrayType)):
                #If an Array state variable is found, add it to the list of issues:
                issues.append(state_variable)
-        
-          return issues
+       return issues
 
    
     def _detect(self) -> List[Output]:
@@ -55,8 +54,7 @@ class ArrayToMapping(AbstractDetector):
 
             for array_variable in array_variables:
                 #Generate a result for the detected issue:
-                info = [f"In contract `{contract.name}`, for variable `{array_variable.name}` 
-                        ({array_variable.type}), consider using a mapping instead of an array."]
+                info = [f"In contract `{contract.name}`, for variable `{array_variable.name}`({array_variable.type}), consider using a mapping instead of an array."]
                 res = self.generate_result(info)
                 results.append(res)
 
