@@ -44,7 +44,7 @@ class redundantSSTORE(AbstractDetector):
     IMPACT = DetectorClassification.OPTIMIZATION
     CONFIDENCE = DetectorClassification.MEDIUM
 
-    WIKI = "https://github.com/crytic/slither/wiki/Detector-Documentation#redundant-store"
+    WIKI = "https://github.com/PereiraMavs/CSE6324_Team_8/wiki/Detector-Wiki#redundant-sstore-operation"
 
     WIKI_TITLE = "Redundant SSTORE operation"
     WIKI_DESCRIPTION = "No read after write causing costly SSTORE operation redundant"
