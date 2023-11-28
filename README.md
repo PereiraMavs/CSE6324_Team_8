@@ -1,7 +1,7 @@
 # CSE6324_Team_8
 Advanced Topics of Software Engineering Fall 2023 Project
 
-Version: 1.0
+Version: 3.0
 
 ## Installation
 
@@ -9,6 +9,7 @@ Version: 1.0
 * go to slither directory `cd slither`
 * run `python3 setup.py install`
 * run `setup.py` after changes
+* `pip install pandas`
 
 ## Dependecies
 
